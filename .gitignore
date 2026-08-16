@@ -1,0 +1,2 @@
+# Netlify CLI local state — holds the site ID, not meant to be shared
+.netlify/

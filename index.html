@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muhammad Subhan Rauf</title>
+<meta name="description" content="Muhammad Subhan Rauf — software engineer. Full-stack web development with Python, FastAPI, React, TypeScript and PostgreSQL.">
+<link rel="canonical" href="https://subhanrauf.com/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://subhanrauf.com/">
+<meta property="og:title" content="Muhammad Subhan Rauf">
+<meta property="og:description" content="Software engineer. Full-stack web development with Python, FastAPI, React, TypeScript and PostgreSQL.">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232350c8'/><text y='72' x='50' text-anchor='middle' font-size='62' font-family='Georgia,serif' fill='white'>S</text></svg>">
+
+<style>
+  /* ── Ledger tokens ─────────────────────────────────────────────
+     Ruled surfaces, one graphite ink, one blue reserved for action. */
+  :root {
+    --ground: #f6f7f9;
+    --surface: #ffffff;
+    --line: #e4e7eb;
+    --line-soft: #eef0f3;
+    --ink: #15171c;
+    --ink-2: #525a67;
+    --ink-3: #6b7280;
+    --accent: #2350c8;
+    --accent-soft: #edf1fc;
+    --accent-hair: #d6e0f8;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground: #0e1014;
+      --surface: #14171d;
+      --line: #262b34;
+      --line-soft: #1d222a;
+      --ink: #eef1f5;
+      --ink-2: #a3acba;
+      --ink-3: #7d8697;
+      --accent: #7ba3ff;
+      --accent-soft: #16203a;
+      --accent-hair: #24365e;
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+                 "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    max-width: 46rem;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 7vw, 5.5rem) clamp(1.25rem, 5vw, 2.5rem) 4rem;
+  }
+
+  /* ── Masthead ── */
+  header { padding-bottom: 2rem; border-bottom: 1px solid var(--line); }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(1.85rem, 5.5vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.021em;
+    font-weight: 600;
+  }
+
+  .standfirst {
+    margin: 0.85rem 0 0;
+    font-size: clamp(1rem, 2.4vw, 1.1rem);
+    color: var(--ink-2);
+    max-width: 34rem;
+  }
+
+  /* ── Sections ── */
+  section { padding-top: 2.5rem; }
+
+  h2 {
+    margin: 0 0 1.15rem;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  p { margin: 0 0 1rem; color: var(--ink-2); }
+  p:last-child { margin-bottom: 0; }
+
+  /* ── Work entry ── */
+  .entry {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 1.4rem 1.5rem;
+  }
+
+  .entry + .entry { margin-top: 1rem; }
+
+  .entry-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .entry-head h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: -0.011em;
+  }
+
+  .tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-hair);
+    border-radius: 999px;
+    padding: 0.12rem 0.55rem;
+    white-space: nowrap;
+  }
+
+  .stack {
+    margin: 0.9rem 0 0;
+    padding-top: 0.85rem;
+    border-top: 1px solid var(--line-soft);
+    font-size: 0.83rem;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ── Links ── */
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 0.18em; }
+  a:hover { text-decoration-thickness: 2px; }
+
+  .contact { list-style: none; margin: 0; padding: 0; }
+
+  .contact li {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.9rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid var(--line-soft);
+  }
+
+  .contact li:first-child { padding-top: 0; }
+  .contact li:last-child { border-bottom: 0; }
+
+  .contact .label {
+    flex: 0 0 5.5rem;
+    font-size: 0.83rem;
+    color: var(--ink-3);
+  }
+
+  footer {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--line);
+    font-size: 0.82rem;
+    color: var(--ink-3);
+  }
+
+  a:focus-visible, :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <header>
+    <h1>Muhammad Subhan Rauf</h1>
+    <!-- EDIT ME: one line on who you are and what you're after. -->
+    <p class="standfirst">
+      Software engineer. I build web platforms end to end — API, data model
+      and interface — and care most about the part where a system stays
+      understandable as it grows.
+    </p>
+  </header>
+
+  <!-- EDIT ME: replace with a real paragraph about yourself. Keep it short. -->
+  <section>
+    <h2>About</h2>
+    <p>
+      I work across the stack: Python and FastAPI on the server, React and
+      TypeScript on the client, PostgreSQL underneath. Most of what I enjoy
+      sits at the seams — data models that hold up, permission boundaries that
+      are actually enforced, and interfaces that stay quiet.
+    </p>
+  </section>
+
+  <!-- Work section: intentionally empty. Client projects don't belong here.
+       When you have something of your own to show, uncomment this and fill it in.
+       Duplicate the <article> block per project.
+
+  <section>
+    <h2>Work</h2>
+
+    <article class="entry">
+      <div class="entry-head">
+        <h3>Project name</h3>
+        <span class="tag">Status</span>
+      </div>
+      <p>What it does, in two or three sentences.</p>
+      <p class="stack">Tech · Tech · Tech</p>
+    </article>
+  </section>
+
+  -->
+
+  <section>
+    <h2>Elsewhere</h2>
+    <ul class="contact">
+      <li>
+        <span class="label">GitHub</span>
+        <a href="https://github.com/Muhammad-Subhan-Rauf" rel="me">github.com/Muhammad-Subhan-Rauf</a>
+      </li>
+      <li>
+        <span class="label">Email</span>
+        <!-- EDIT ME: swap or remove if you'd rather not publish this address. -->
+        <a href="mailto:raufsubhan45@gmail.com">raufsubhan45@gmail.com</a>
+      </li>
+      <!-- Add LinkedIn / X / writing links here. -->
+    </ul>
+  </section>
+
+  <footer>
+    subhanrauf.com
+  </footer>
+
+</main>
+</body>
+</html>
